@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>We are learning the webpack/Angular</title>
+</head>
+
+<body ng-app="app">
+	<div class="header">
+			<ul>
+				<li><a href="#!/home">Home</a></li>
+				<li><a href="#!/contacts">Contacts</a></li>
+			</ul>
+	</div>
+	<div class="container">
+		<h1>Our Content</h1>
+		<div clas="">{{22+6}} times</div>
+		<button class="button">Кнопка</button>
+		<div class="loaderBox">
+			<div class="loader">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12"> 
+				<ng-view></ng-view>
+			</div>
+		</div>
+	</div>
+	<!--select.jaja>option*4>a[src=image-$.jpg].imageLink[value=image]>{kakakak-$}-->
+	<script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

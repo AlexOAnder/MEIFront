@@ -1,0 +1,97 @@
+body{
+	font-size: 22px;
+  font-family: sans-serif;
+}
+/*тень*/
+.navbar{
+	box-shadow: 0px 0px 14px 0px black;
+}
+
+/*Блок для появления линии над элементом хеадера при наведении*/
+.header>ul li:before {
+  background: #7AE2DE;
+  content: '';
+  height: 5px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  transform: scaleX(0);
+  transition: all .2s ease-in-out;
+}
+
+.header>ul li:focus, 
+.header>ul li:hover{
+  color: #7AE2DE;
+}
+
+.header>ul li:hover:before, .header>ul li.open:before {
+  transform: scaleX(1);
+  z-index:9999;
+}
+/* end block*/
+
+/*Little loader */
+.loaderBox *{box-sizing:border-box}
+.loaderBox {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+@keyframes loader {
+  0% {transform:rotate(0deg)}
+  25%{transform:rotate(-135deg)}
+  50%{transform:rotate(-45deg)}
+  75%{transform:rotate(0deg)}
+  100%{transform:rotate(-225deg)}}
+@keyframes span-1 {
+  0% {transform:translate(0px,-50px);}
+  50%{transform:translate(-50px, 0);border-color:#EE4D68;opacity: 1}
+  100%{transform:translate(0);border-radius: 0%;border-color:#fff;opacity:.8}}
+@keyframes span-2 {
+  0%{transform:translate(-0px,50px);}
+  50%{transform:translate(50px, 0);border-color:#875678;opacity: 1}
+  100%{transform:translate(0);border-radius: 0%;border-color:#fff;opacity:.8}}
+@keyframes span-3 {
+  0%{transform:translate(-0px,50px);}
+  50%{transform:translate(0, -50px);border-color:#FF9900;opacity: 1}
+  100%{transform:translate(0);border-radius: 0%;border-color:#fff;opacity:.8}}
+@keyframes span-4 {
+  0%{transform:translate(0px,-50px);}
+  50%{transform:translate(0, 50px);border-color:#00E4F6;opacity: 1}
+  100%{transform:translate(0px);
+    border-radius: 0%;
+    border-color:#fff;
+    opacity:.8}
+}
+.loaderBox .loader {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  animation: loader 4s infinite ease;
+}
+.loaderBox .loader span {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 4px solid #0B1B48;
+  border-radius: 50%;
+  opacity:0;
+}
+.loaderBox .loader span:nth-child(1) {
+  animation: span-1 2s cubic-bezier(.1,.5,.6,1) infinite;
+}
+.loaderBox .loader span:nth-child(2) {
+  animation: span-2 2s cubic-bezier(.1,.5,.6,1) infinite;
+}
+.loaderBox .loader span:nth-child(3) {
+  animation: span-3 2s cubic-bezier(.1,.5,.6,1) infinite;
+}
+.loaderBox .loader span:nth-child(4) {
+  animation: span-4 2s cubic-bezier(.1,.5,.6,1) infinite;
+}
+/* end of little loader*/
