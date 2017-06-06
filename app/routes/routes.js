@@ -1,3 +1,4 @@
+
 module.exports = function(ngModule){
 	ngModule.config(function($routeProvider){
         $routeProvider.when('/home',
@@ -10,8 +11,13 @@ module.exports = function(ngModule){
             templateUrl:'views/contacts.html',
             controller:'ContactCtrl'
         });
+         $routeProvider.when('/landing',
+        {
+            templateUrl:'views/landing.html',
+            controller:'LandingCtrl'
+        });
         $routeProvider.otherwise({
-        	redirectTo: '/home'
+            redirectTo: '/landing'
         });
 	});
 };
